@@ -4,6 +4,11 @@ import { ApolloProvider } from "@apollo/client";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import { useApollo } from "../lib/apolloClient";
+import Page from "components/page";
+
+if (process.env.NEXT_PUBLIC_API_MOCKING === "enabled") {
+  require("../mocks");
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const apolloClient = useApollo(pageProps);
@@ -25,7 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           colorScheme: "light",
         }}
       >
-        <Component {...pageProps} />
+        <Page>
+          <Component {...pageProps} />
+        </Page>
       </MantineProvider>
     </ApolloProvider>
   );
