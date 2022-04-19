@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import HomeScreen from "screens/home";
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +11,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Hello World</main>
+      <main>
+        <HomeScreen />
+      </main>
     </div>
   );
 };
