@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import HomeScreen from "screens/home";
+import Registration from "screens/registration";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <HomeScreen />
+        <Registration />
       </main>
     </div>
   );
